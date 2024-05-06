@@ -28,9 +28,9 @@ function QuickbarHandler.prototype.registerQuickbarSetHandler(self, handler)
     local ____self_quickbarSetHandlers_0 = self.quickbarSetHandlers
     ____self_quickbarSetHandlers_0[#____self_quickbarSetHandlers_0 + 1] = handler
 end
-function QuickbarHandler.prototype.QuickbarSet(self, quickbarIndex, index, entityID)
+function QuickbarHandler.prototype.QuickbarSet(self, quickbarIndex, index, entityID, curr)
     for ____, handler in ipairs(self.quickbarSetHandlers) do
-        if not handler:set(quickbarIndex, index, entityID) then
+        if not handler:set(quickbarIndex, index, entityID, curr) then
             return false
         end
     end

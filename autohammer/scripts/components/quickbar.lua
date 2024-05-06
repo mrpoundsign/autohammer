@@ -66,7 +66,7 @@ function QuickbarComponent.prototype.setActiveItem(self, index)
     end
 end
 function QuickbarComponent.prototype.set(self, quickbarIndex, index, entityID)
-    if not AHQuickbar:QuickbarSet(quickbarIndex, index, entityID) then
+    if not AHQuickbar:QuickbarSet(quickbarIndex, index, entityID, self.quickbars[quickbarIndex + 1].items[index + 1]) then
         return
     end
     self.quickbars[quickbarIndex + 1].items[index + 1] = entityID
