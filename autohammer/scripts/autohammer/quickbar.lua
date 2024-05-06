@@ -1,24 +1,9 @@
 local ____lualib = require("lualib_bundle")
-local __TS__New = ____lualib.__TS__New
 local __TS__Class = ____lualib.__TS__Class
+local __TS__New = ____lualib.__TS__New
 local __TS__SourceMapTraceBack = ____lualib.__TS__SourceMapTraceBack
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["7"] = 1,["8"] = 1,["9"] = 1,["10"] = 4,["11"] = 4,["12"] = 4,["13"] = 4,["14"] = 4,["15"] = 4,["16"] = 4,["17"] = 5,["18"] = 6,["19"] = 4,["20"] = 4,["21"] = 4,["22"] = 16,["23"] = 16,["25"] = 18,["26"] = 16,["27"] = 21,["28"] = 22,["29"] = 22,["30"] = 21,["31"] = 26,["32"] = 27,["33"] = 28,["34"] = 29,["37"] = 33,["38"] = 26,["39"] = 37,["40"] = 39});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["7"] = 8,["8"] = 8,["10"] = 10,["11"] = 8,["12"] = 13,["13"] = 14,["14"] = 14,["15"] = 13,["16"] = 18,["17"] = 19,["18"] = 20,["19"] = 21,["22"] = 25,["23"] = 18,["24"] = 29,["25"] = 31});
 local ____exports = {}
-local ____command = require("systems.command")
-local Commands = ____command.Commands
-local Command = ____command.Command
-Commands.commands:set(
-    "/mrforge",
-    __TS__New(
-        Command,
-        "mrforge",
-        "// Mr. Forge",
-        function(____, player, content)
-            local chat = UIManager.get("Hud").chat
-            chat:receive("Mr. Forge Reporting In For Duty!")
-        end
-    )
-)
 local QuickbarHandler = __TS__Class()
 QuickbarHandler.name = "QuickbarHandler"
 function QuickbarHandler.prototype.____constructor(self)
